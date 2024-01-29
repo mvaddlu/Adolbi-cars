@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    align-items: center;
+}
+*{
+  box-sizing: border-box;
+  
+}
+#details summary::marker{
+  content:"+  ";
+  
+}
+[open]#details summary::marker{
+  content:"+  ";
+  transform: rotate(45deg);
+}
+#details {
+  min-height: fit-content(150px,250px);
+
+}
+[open]#details div{
+  margin: 20px auto;
+}
+#text-details summary::marker{
+  display: none;
+  content: ' ';
+}
+
+.buing-item::before{
+  position: absolute;
+  --tw-content:url("./accest/Main/Arrow.svg");
+  content: var(--tw-content) ;
+  left: 100%;
+  top:50%;
+  margin-left: 5px;
+}
+@media (max-width: 950px) {
+  .buing-item::before{
+    rotate: 90deg;
+    left:25%;
+    bottom: -120px;
+
+  }
+}
+.active:not(#Item){
+  color: #740706;
+}
+
+div.lg-counter{
+  padding-left: 40px;
+}
